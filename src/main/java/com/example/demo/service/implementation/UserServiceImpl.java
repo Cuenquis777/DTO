@@ -64,10 +64,10 @@ public class UserServiceImpl implements IUserService {
 
         if (userEntity.isPresent()) {
             UserEntity currentUserEntity = userEntity.get();
-            //currentUserEntity.setName(userDTO.getName());
-            //currentUserEntity.setLastName(userDTO.getLastName());
-            //currentUserEntity.setEmail(userDTO.getEmail());
-            //currentUserEntity.setAge(userDTO.getAge());
+            currentUserEntity.setName(userDTO.getName());
+            currentUserEntity.setLastName(userDTO.getLastName());
+            currentUserEntity.setEmail(userDTO.getEmail());
+            currentUserEntity.setAge(userDTO.getAge());
 
             this.userDAO.updateUser(currentUserEntity);
             ModelMapper modelMapper = new ModelMapper();

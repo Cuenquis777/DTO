@@ -19,8 +19,7 @@ public class UserDaoImpl implements IUserDAO {
     @Override
     @Transactional(readOnly = true)
     public List<UserEntity> findAll() {
-        return this.em.createQuery("SELECT_u_FROM UserEntity u").getResultList();
-    }
+        return this.em.createQuery("SELECT u FROM UserEntity u").getResultList();    }
 
     @Override
     @Transactional(readOnly = true)
